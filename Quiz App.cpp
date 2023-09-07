@@ -95,7 +95,6 @@ class Question{
             questionsUserAnsweredIncorrectly++;
             cout << "Correct Option Was: " << getCorrectOption() << endl;
             cin.clear();
-            //cin.ignore(numeric_limits<streamsize>::max(), '\n');
             return false;
         }
         
@@ -107,23 +106,6 @@ void incrementQuestionNumber(){
         questionNumber++;
     }
 }
-
-/*
-bool pressAnyKey(){
-    bool boolean = true;
-    cout << "Press Any Key To Continue: "; //Ask for clarification about this
-    if(boolean){
-        cin >> boolean;
-    }
-    return true;
-}
-*/
-
-void pressAnyKey(){
-    cout << "Press Enter To Continue: ";
-    getchar(); //Ask for clarification about this
-}
-
 
 Question questionOne;
 Question questionTwo;
@@ -148,7 +130,6 @@ void questionOnePrompt(){
     }
     
     questionOne.checkAnswer();
-    //pressAnyKey();
     incrementQuestionNumber();
 }
 void questionTwoPrompt(){
@@ -163,7 +144,6 @@ void questionTwoPrompt(){
     }
     
     questionTwo.checkAnswer();
-    //pressAnyKey();
     incrementQuestionNumber();
 }
 void questionThreePrompt(){
@@ -178,7 +158,6 @@ void questionThreePrompt(){
     }
     
     questionThree.checkAnswer();
-    //pressAnyKey();
     incrementQuestionNumber();
 }
 void questionFourPrompt(){
@@ -193,7 +172,6 @@ void questionFourPrompt(){
     }
     
     questionFour.checkAnswer();
-    //pressAnyKey();
     incrementQuestionNumber();
 }
 void questionFivePrompt(){
@@ -208,7 +186,6 @@ void questionFivePrompt(){
     }
     
     questionFive.checkAnswer();
-    //pressAnyKey();
     incrementQuestionNumber();
 }
 void questionSixPrompt(){
@@ -223,7 +200,6 @@ void questionSixPrompt(){
     }
     
     questionSix.checkAnswer();
-    //pressAnyKey();
     incrementQuestionNumber();
 }
 void questionSevenPrompt(){
@@ -238,7 +214,6 @@ void questionSevenPrompt(){
     }
     
     questionSeven.checkAnswer();
-    //pressAnyKey();
     incrementQuestionNumber();
 }
 void questionEightPrompt(){
@@ -253,7 +228,6 @@ void questionEightPrompt(){
     }
     
     questionEight.checkAnswer();
-    //pressAnyKey();
     incrementQuestionNumber();
 }
 void questionNinePrompt(){
@@ -268,7 +242,6 @@ void questionNinePrompt(){
     }
     
     questionNine.checkAnswer();
-    //pressAnyKey();
     incrementQuestionNumber();
 }
 void questionTenPrompt(){
@@ -284,7 +257,6 @@ void questionTenPrompt(){
     }
     
     questionTen.checkAnswer();
-    //pressAnyKey();
 }
 string finalGradeCalculator(){
     int gradePercentage = ((double) (totalUserScore) / (double) (questionNumber)) * 100;
